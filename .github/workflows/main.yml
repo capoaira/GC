@@ -2,7 +2,7 @@ name: User Action
 
 on:
   schedule:
-  - chron: "15 12 * * *"
+  - cron: "15 12 * * *"
 
 permissions:
   issues: write
