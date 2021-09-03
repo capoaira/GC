@@ -12,8 +12,7 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@main
-        id: stale
+      - uses: actions/stale@v4.0.0
         with:
           close-issue-message: "This Issue is closed because the user does not answer"
           days-before-stale: 1
