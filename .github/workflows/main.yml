@@ -1,0 +1,26 @@
+name: User Action
+
+on:
+  schedule:
+  - chron: "15 12 * * *
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@main
+        id: stale
+        with:
+          close-issue-message: "This Issue is closed because the user does not answer"
+          days-before-stale: 1
+          days-before-close: 1
+          only-labels: "user action"
+          stale-issue-label: "user 15 days"
+          close-issue-label: "user 30 days,invalid"
+      - name: Print outputs
+        run: echo ${{ join(steps.stale.outputs.*, ',') }}
+    
