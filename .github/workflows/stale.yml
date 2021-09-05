@@ -1,8 +1,8 @@
-name: User Action
+name: Handel User Action
 
 on:
   schedule:
-  - cron: "15 12 * * *"
+  - cron: "0 0,12, * * *"
 
 permissions:
   issues: write
