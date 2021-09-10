@@ -2,7 +2,7 @@ name: Handel User Action
 
 on:
   schedule:
-  - cron: "0 0,12, * * *"
+  - cron: "0 0 * * *"
 
 permissions:
   issues: write
