@@ -18,8 +18,8 @@ jobs:
           days-before-stale: 1
           days-before-close: 1
           only-labels: "user action"
-          stale-issue-label: "user 15 days"
-          close-issue-label: "user 30 days,invalid"
+          stale-issue-label: "user-15-days"
+          close-issue-label: "user-30-days,invalid"
       - name: Print outputs
         run: echo ${{ join(steps.stale.outputs.*, ',') }}
     
